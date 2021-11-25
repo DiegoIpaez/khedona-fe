@@ -23,7 +23,6 @@ const Home = () => {
     });
   }, [pagina]);
 
-  console.log(productos)
 
   return (
     <>

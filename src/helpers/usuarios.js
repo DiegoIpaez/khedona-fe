@@ -1,4 +1,4 @@
-const url = "https://distt-api.herokuapp.com/api/usuarios";
+const url = "https://distt-api.herokuapp.com";
 // const url = "https://restserver-pm.herokuapp.com";
 
 export const getUsuarios = async (desde) => {

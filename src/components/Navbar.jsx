@@ -1,41 +1,55 @@
 import React from "react";
+import { Link, useHistory } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import logo from "../assets/logo-home.png";
 
 const Navbarjsx = () => {
+  // Login
+  const history = useHistory();
+
+  const logout = () => {
+    localStorage.clear();
+    history.push("/login");
+  };
+
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="white" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand as={Link} to="/">
             <img src={logo} className="logo-home" alt="logoDelNav" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto mb-1">
-              <Nav.Link eventKey={2} href="#memes">
+              <Nav.Link eventKey={2} as={Link} to="/">
                 Inicio
               </Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
+              <Nav.Link eventKey={2} as={Link} to="/contact">
                 Contacto
               </Nav.Link>
             </Nav>
-            <Nav className="mb-1">
-              <Nav.Link eventKey={2} href="#memes">
+            <Nav> 
+              <Nav.Link eventKey={2} as={Link} to="/cart" className="pt-3" >
                 Carrito
               </Nav.Link>
               {/* Boton desplegable */}
-              <NavDropdown title="Usuario" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
+              <NavDropdown
+                title="Usuario"
+                id="collasible-nav-dropdown"
+                className="nav-link"
+              >
+                <NavDropdown.Item as={Link} to="/user" className="nav-link">
+                  <i className="far fa-user me-1"></i>Yo
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
+                <NavDropdown.Item as={Link} className="nav-link" to="/admin">
+                  Admin
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
+                <NavDropdown.Item onClick={logout}>
+                  <span className="nav-link">
+                    <i className="fas fa-sign-out-alt"></i> Salir
+                  </span>
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
