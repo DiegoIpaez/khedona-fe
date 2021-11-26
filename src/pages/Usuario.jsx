@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Form} from 'react-bootstrap'
 
 const Usuario = () => {
   const datos = JSON.parse(localStorage.getItem("auth"));
@@ -15,57 +15,78 @@ const Usuario = () => {
   return (
     <div>
       <div className="container">
+      <Form>
+        <h3 className="text-center pb-2">Datos personales</h3>
+        <hr />
         <div className="row">
-          <div className="col-12  ">
-            <div className=" text-center">
-              <img
-                src="http://morichile.cl/wp-content/uploads/2014/10/user77.png"
-                alt="avatar"
-                className="w-25"
-              />
-            </div>
-            <div className=" text-center">
-              <h1>Bienvenido/a, {datos.usuario.nombre}!</h1>
-            </div>
+          <div className="col">
+            <Form.Group className="mb-3" controlId="formBasicName">
+              <Form.Label>Nombre</Form.Label>
+              <Form.Control type="name" placeholder={datos.usuario.nombre} />
+            </Form.Group>
+          </div>
+          <div className="col">
+            {" "}
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Apellido</Form.Label>
+              <Form.Control type="name" />
+            </Form.Group>
           </div>
         </div>
-        {/* Fin de 1er row */}
-        <div className="row mt-5">
-          <h3>Tus datos</h3>
-
-          <div className="card ">
-            <table className="table">
-              <tbody className="text-center">
-                <tr>
-                  <th scope="row">Nombre</th>
-                  <td>{datos.usuario.nombre}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Email</th>
-                  <td>{datos.usuario.email}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Domicilio</th>
-                  <td>
-                    {datos.usuario.domicilio ? datos.usuario.domicilio : "-"}
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Usuario</th>
-                  <td>
-                    {datos.usuario.rol === "ADMIN_ROLE"
-                      ? "Administrador"
-                      : "Cliente"}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+        {/* <div className="row">
+          <div className="col-md-4">
+            <Form.Group className="mb-3" controlId="formBasic">
+              <Form.Label>Fecha de Nac.</Form.Label>
+              <Form.Control type="password" placeholder="13/06/2000" />
+            </Form.Group>
           </div>
-        </div>
-        {/* Fin row 2 */}
-        <h3>Tus pedidos</h3>
+          <div className="col-md-4">
+            <Form.Group className="mb-3" controlId="formBasic1">
+              <Form.Label>Cod. area</Form.Label>
+              <Form.Control type="number" placeholder="3000" />
+            </Form.Group>
+          </div>
+          <div className="col-md-4">
+            <Form.Group className="mb-3" controlId="formBasic2">
+              <Form.Label>Telefono</Form.Label>
+              <Form.Control type="phone" placeholder="3816136233" />
+            </Form.Group>
+          </div>
+        </div> */}
+        {/* <div className="row">
+          <div className="col-md-6">
+            <Form.Group className="mb-3" controlId="formBasic3">
+              <Form.Label>Tipo de Documento</Form.Label>
+              <Form.Control type="text" placeholder="DNI.." />
+            </Form.Group>
+          </div>
+          <div className="col-md-6">
+            <Form.Group className="mb-3" controlId="formBasic4">
+              <Form.Label>Documento</Form.Label>
+              <Form.Control type="text" placeholder="42156746" />
+            </Form.Group>
+          </div>
+        </div> */}
 
-				
+        <Form.Group className="mb-3" controlId="formBasic5">
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" placeholder={datos.usuario.email} />
+        </Form.Group>
+
+        {/* llamar boton en los imports */}
+        {/* <div className="row text-center mt-3">
+          <div className="col-md-6">
+            <Button variant="" type="submit">
+              Cancelar
+            </Button>
+          </div>
+          <div className="col-md-6">
+            <Button variant="primary" type="submit">
+              Guardar
+            </Button>
+          </div>
+        </div> */}
+      </Form>
 				
       </div>
       {/* Fin de container */}

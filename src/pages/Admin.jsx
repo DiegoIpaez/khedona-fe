@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AdminUser from "../components/AdminUser";
-import AdminCateg from "../components/BotonCateg";
+import AdminCateg from "../components/AdminCateg";
 import AdminProd from "../components/AdminProd";
 import AdminPedidos from "../components/AdminPedidos";
 

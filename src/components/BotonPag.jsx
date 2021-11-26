@@ -18,7 +18,7 @@ const BotonPag = ({ totPag, pagina, setPagina, limite = 4 }) => {
   return (
     <>
       <button
-        className="btn btn-secondary"
+        className="btn btn-paginacion"
         onClick={prevPag}
         disabled={pagina === 0 ? true : false}
       >
@@ -26,7 +26,7 @@ const BotonPag = ({ totPag, pagina, setPagina, limite = 4 }) => {
        
       </button>
       <button
-        className="btn btn-secondary ms-2"
+        className="btn btn-paginacion ms-2"
         disabled={total - (pagina + limite) <= 0 ? true : false}
         onClick={nextPag}
       >

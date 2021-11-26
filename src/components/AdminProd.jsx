@@ -77,7 +77,7 @@ const AdminProd = () => {
       {/* Fin de Titulo */}
       {/* ------------------------------ */}
       {/* Titulo tabla */}
-      <div className="row appTabla mb-1">
+      <div className="row appTabla mb-1 text-white">
         <div className="col-md-3 col-4 pt-3 pb-3 ">Nombres</div>
         <div className="col-md-2 col-4 pt-3 pb-3">Disponible</div>
         <div className="col-md-2 col-4 pt-3 pb-3">Precio</div>

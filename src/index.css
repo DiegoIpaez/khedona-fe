@@ -91,3 +91,65 @@ body {
 .img-fluid {
   border-radius: 10%;
 }
+
+/* Btn PAGINACION */
+.btn-paginacion{
+  background-color:#ff0080 !important;
+  color: rgb(255, 255, 255) !important; 
+  border-radius: 90px !important;
+}
+.btn-paginacion:hover{
+  background-color: white !important;
+  color: #ff0080 !important;
+  border: 1px solid #ff0080 !important;
+}
+/* Fin Btn PAGINACION */
+
+/* Admin */
+.fa-user-plus{
+  color: white;
+}
+.appTabla {
+  background-color: #c845a1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/* Admin */
+
+/* Producto id */
+.img-id{
+  height: 30%;
+  width: 85%;
+  border-radius: 15%;
+} 
+
+.atajos-text {
+  text-decoration: none !important;
+  color: #292929 !important;
+}
+
+.atajos-text:hover {
+  color: #ff0080!important;
+}
+
+.btn-volver {
+  border: 1px solid #ff0080 !important;
+  color: #ff0080 !important;
+  text-decoration: none !important;
+}
+
+.btn-volver:hover {
+  background-color: #ff0080;
+  color: #ffffff !important;
+}
+
+.btn-compra {
+  border:1px solid #ff0080 !important;
+  color: #ff0080 !important;
+  text-decoration: none !important;
+}
+
+.btn-compra:hover {
+  background-color: #ff0080 !important;
+  color: #ffffff !important;
+}

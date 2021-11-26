@@ -4,6 +4,7 @@ import { postAuth } from "../helpers/autenticador";
 import { Form, Button } from "react-bootstrap";
 import ModalRegisUser from "../components/modals/ModalRegisUser";
 
+
 export default function Login() {
   const isMounted = useRef(true);
 
