@@ -98,6 +98,8 @@ const ModalCateg = ({ show, handleClose, actualizar }) => {
                 required
                 value={formValue.nombre}
                 onChange={handleChange}
+                maxLength={20}
+                minLength={3}
               />
             </div>
           </Modal.Body>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getProductos } from "../helpers/productos";
 
 import Carrusel from "../components/Carrusel";
+import BusquedaProd from "../components/BusquedaProd";
 import Donas from "../components/Donas";
 import BotonPag from "../components/BotonPag";
 
@@ -28,6 +29,11 @@ const Home = () => {
     <>
       <Carrusel />
       <div className="container mt-5 mb-5">
+        <div className="row mb-5">
+          <span>Con delivery</span>
+          <div><h2>Cajas armadas</h2></div>
+          <BusquedaProd />
+        </div>
         <div>
           <Donas productos={productos} />
         </div>

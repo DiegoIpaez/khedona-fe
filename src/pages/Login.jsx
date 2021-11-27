@@ -90,6 +90,8 @@ export default function Login() {
                     name="email"
                     placeholder="user@gmail.com"
                     className="inputLoginUser"
+                    maxLength={30}
+										minLength={8}
                   />
                   <Form.Text className="text-muted ps-1">
                     (* We'll never share your email with anyone else.)
@@ -107,6 +109,8 @@ export default function Login() {
                     type="password"
                     placeholder="Password"
                     className="inputLoginUser"
+                    maxLength={20}
+										minLength={6}
                   />
                 </Form.Group>
                 

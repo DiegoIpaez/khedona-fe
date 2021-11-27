@@ -5,26 +5,23 @@ const Donas = ({ productos }) => {
   return (
     <>
       <div className="row row-cols-1 row-cols-md-3 g-4">
+      
         {productos.map((producto) => (
-          <div className="col" key={producto._id}>
-            <div className="card h-100">
-              <img
-                src={
-                  producto.img
-                    ? producto.img
-                    : "https://www.dulcedona.com/wp-content/uploads/2020/10/choconew.jpg"
-                }
-                className="card-img-top"
-                alt={producto.nombre}
-              />
-              <div className="card-body">
-                <h5 className="card-title">
-                  <Link to={`product/${producto._id}`}>{producto.nombre}</Link>
-                </h5>
-                <strong>{producto.categoria.nombre}</strong>
-              </div>
-            </div>
-          </div>
+          <div className="col-12 col-md-3 mt-4  imagen-work text-center" key={producto._id}>
+          <Link to={`product/${producto._id}`}>
+          <img
+            src={
+              producto.img
+                ? producto.img
+                : "https://www.dulcedona.com/wp-content/uploads/2020/10/choconew.jpg"
+            }
+            className="img-home"
+            alt={producto.nombre}
+          />
+          <h6 className="nombreP-home pt-2">{producto.nombre}</h6>
+          </Link>
+          
+        </div>
         ))}
       </div>
     </>

@@ -105,6 +105,8 @@ const ModalPedidos = ({ show, handleClose, actualizar }) => {
                 required
                 value={formValue.productos}
                 onChange={handleChange}
+                maxLength={20}
+                minLength={3}
               />
             </div>
             <div className="form-group">
@@ -115,6 +117,8 @@ const ModalPedidos = ({ show, handleClose, actualizar }) => {
                 className="form-control"
                 value={formValue.total}
                 onChange={handleChange}
+                maxLength={20}
+                minLength={1}
               />
             </div>
             <div className="form-group">
@@ -135,6 +139,8 @@ const ModalPedidos = ({ show, handleClose, actualizar }) => {
                 className="form-control"
                 value={formValue.nota}
                 onChange={handleChange}
+                maxLength={200}
+                minLength={10}
               />
             </div>
 

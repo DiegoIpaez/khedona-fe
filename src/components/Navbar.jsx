@@ -31,16 +31,16 @@ const Navbarjsx = () => {
             </Nav>
             <Nav> 
               <Nav.Link eventKey={2} as={Link} to="/cart" className="pt-3" >
-                Carrito
+              <i className="fas fa-shopping-cart"></i>
               </Nav.Link>
               {/* Boton desplegable */}
               <NavDropdown
-                title="Usuario"
+                title={<i className="fas fa-user ms-2"></i>}
                 id="collasible-nav-dropdown"
                 className="nav-link"
               >
                 <NavDropdown.Item as={Link} to="/user" className="nav-link">
-                  <i className="far fa-user me-1"></i>Yo
+                <i className="far fa-user me-1"></i>Yo
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link} className="nav-link" to="/admin">
                   Admin

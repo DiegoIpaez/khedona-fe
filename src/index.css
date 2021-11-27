@@ -68,6 +68,24 @@ body {
   transform: scale(1.25);
   opacity: 0.8;
 }
+
+.fa-instagram{
+  font-size: 250%;
+  color: white;
+}
+.fa-facebook-f{
+  font-size: 250%;
+  color: white;
+}
+.fa-twitter{
+  font-size: 250%;
+  color: white;
+}
+.fa-whatsapp{
+  font-size: 250%;
+  color: white;
+}
+
 /* Fin de redes */
 
 /* Footer */
@@ -77,13 +95,14 @@ body {
   background-color: rgb(255, 245, 245);
 }
 
-.footer-items a:hover {
+.footer-items:hover {
   color: #6b0036;
   z-index: 2;
 }
-.footer-items a {
+.footer-items{
   text-decoration: none;
   color: #ff0080;
+  font-size: 95%;
 }
 /* Fin de footer */
 
@@ -153,3 +172,46 @@ body {
   background-color: #ff0080 !important;
   color: #ffffff !important;
 }
+
+/* BUSCADOR */
+.busquedaL{
+  z-index: 1;
+  
+  position: absolute;
+  background-color: #f6f6f6;
+  text-decoration: none;
+  list-style:none;
+  font-size: 15px;
+ 
+  box-shadow: 1px 8px 16px 0px rgba(0,0,0,0.24);
+-webkit-box-shadow: 1px 8px 16px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 1px 8px 16px 0px rgba(0,0,0,0.24);
+}
+
+.busqueda-nombre{
+  font-size: 100%;
+  color: #ff00aa;
+}
+
+.btn-search{
+  background-color: #ff00aa !important;
+}
+/* BUSCADOR */
+
+/* Home */
+/* .img-home{
+  height: 24vh;
+  width: 17vw;
+} */
+
+.img-home{
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.nombreP-home{
+  text-decoration: none !important;
+  color: #292929;
+}
+

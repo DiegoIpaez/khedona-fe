@@ -12,18 +12,18 @@ const Footer = () => {
             </div>
 
             <div className="col-3 col-md-2 text-center redes-items">
-              <i className="fa fa-twitter fa-3x" aria-hidden="true"></i>
+            <i className="fab fa-twitter"></i>
             </div>
 
             <div className="col-3 col-md-2 text-center redes-items">
-              <i className="fa fa-facebook fa-3x" aria-hidden="true"></i>
+            <i className="fab fa-facebook-f"></i>
             </div>
 
             <div className="col-3 col-md-2 text-center redes-items">
-              <i className="fa fa-instagram fa-3x" aria-hidden="true"></i>
+            <i className="fab fa-instagram"></i>
             </div>
             <div className="col-3 col-md-2 text-center redes-items">
-              <i className="fa fa-whatsapp fa-3x" aria-hidden="true"></i>
+            <i className="fab fa-whatsapp"></i>
             </div>
           </div>
         </div>
@@ -32,6 +32,7 @@ const Footer = () => {
       <div className="footer-wrap">
         <div className="container">
           <div className="row text-center">
+            <div className="col-12 col-md-1 mb-2 footer-items"></div>
             <div className="col-12 col-md-3 mb-2 footer-items">
               <b>
                 Desarrollado por el grupo "FIVECODES", visitanos en nuestra web
@@ -39,17 +40,14 @@ const Footer = () => {
               </b>
             </div>
 
-            <div className="col-12 col-md-3 mb-2 footer-items">
+            <div className="col-12 col-md-4 mb-2 footer-items">
               <span>NOSOTROS</span>
-            </div>
-
-            <div className="col-12 col-md-3 mb-2 footer-items">
-              <span>FRANQUICIAS</span>
             </div>
 
             <div className="col-12 col-md-3 mb-2 footer-items">
               <span>KHEDONA © 2019-2021</span>
             </div>
+            <div className="col-12 col-md-1 mb-2 footer-items"></div>
           </div>
         </div>
       </div>

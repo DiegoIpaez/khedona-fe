@@ -60,6 +60,8 @@ const ModalUser = ({ show, handleClose }) => {
                 required
                 value={formValue.nombre}
                 onChange={handleChange}
+                maxLength={20}
+                minLength={3}
               />
             </div>
             <div className="form-group">
@@ -72,6 +74,8 @@ const ModalUser = ({ show, handleClose }) => {
                 required
                 value={formValue.apellido}
                 onChange={handleChange}
+                maxLength={20}
+                minLength={3}
               />
             </div>
             <div className="form-group">
@@ -84,6 +88,8 @@ const ModalUser = ({ show, handleClose }) => {
                 required
                 value={formValue.email}
                 onChange={handleChange}
+                maxLength={20}
+                minLength={3}
               />
             </div>
             <div className="form-group">
@@ -96,6 +102,8 @@ const ModalUser = ({ show, handleClose }) => {
                 required
                 value={formValue.password}
                 onChange={handleChange}
+                maxLength={20}
+                minLength={6}
               />
             </div>
             <div className="form-group">

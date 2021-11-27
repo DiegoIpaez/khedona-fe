@@ -131,6 +131,8 @@ const ModalProd = ({ show, handleClose, actualizar }) => {
                 required
                 value={formValue.nombre}
                 onChange={handleChange}
+                maxLength={20}
+                minLength={3}
               />
             </div>
             <div className="form-group">
@@ -141,6 +143,8 @@ const ModalProd = ({ show, handleClose, actualizar }) => {
                 className="form-control"
                 value={formValue.precio}
                 onChange={handleChange}
+                maxLength={20}
+                minLength={1}
               />
             </div>
             <div className="form-group">
@@ -151,6 +155,8 @@ const ModalProd = ({ show, handleClose, actualizar }) => {
                 className="form-control"
                 value={formValue.img}
                 onChange={handleChange}
+                maxLength={700}
+                minLength={1}
               />
             </div>
             <div className="form-group">
@@ -161,6 +167,8 @@ const ModalProd = ({ show, handleClose, actualizar }) => {
                 className="form-control"
                 value={formValue.detalle}
                 onChange={handleChange}
+                maxLength={300}
+                minLength={3}
               />
             </div>
             <div className="form-group">
