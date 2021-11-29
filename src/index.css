@@ -215,3 +215,27 @@ body {
   color: #292929;
 }
 
+/* Home */
+
+/* Carrito */
+.title-cart{
+  background-color: #ff0080;
+  font-size: 20px;
+}
+
+.btn-cart-plus{
+  background-color: #ff0080 !important;
+  color: white;
+}
+
+.btn-cart-pedido{
+  background-color: #ff0080 !important;
+  color: white;
+}
+
+.btn-cart-pedido:hover{
+ border:1px solid #ff0080 !important;
+ color: #ff0080 !important;
+}
+/* Carrito */
+
