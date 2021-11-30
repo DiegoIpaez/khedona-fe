@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       {/* Redes */}
-      <section className="redes">
+      <section className="redes mt-5">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-4 text-center text-white font-weight-bold">
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
       </section>
       {/* Fin de redes*/}
-      <div className="footer-wrap">
+      <div className="footer-wrap pb-5">
         <div className="container">
           <div className="row text-center">
             <div className="col-12 col-md-1 mb-2 footer-items"></div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import logo from "../assets/logo-home.png";
+import logoHome from "../assets/logo-home.png";
 
 const Navbarjsx = () => {
   // Login
@@ -17,7 +17,7 @@ const Navbarjsx = () => {
       <Navbar collapseOnSelect expand="lg" bg="white" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            <img src={logo} className="logo-home" alt="logoDelNav" />
+            <img src={logoHome} className="logo-home" alt="logoDelNav" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

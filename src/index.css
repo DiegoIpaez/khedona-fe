@@ -1,10 +1,11 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 350 !important;
 }
 
 /* Navbar */
@@ -20,7 +21,7 @@ body {
   color: #ff6cb5 !important;
 }
 
-.logo-home{
+.logo-home {
   width: 220px;
 }
 
@@ -29,9 +30,8 @@ body {
   font-weight: bold;
 }
 
-
 /* Carousel */
-.img-carousel{
+.img-carousel {
   max-height: 70vh;
   object-fit: cover;
 }
@@ -47,8 +47,6 @@ body {
   color: rgb(251, 251, 251);
 }
 /* Fin de Carousel */
-
-
 
 /* Redes */
 .redes {
@@ -69,19 +67,19 @@ body {
   opacity: 0.8;
 }
 
-.fa-instagram{
+.fa-instagram {
   font-size: 250%;
   color: white;
 }
-.fa-facebook-f{
+.fa-facebook-f {
   font-size: 250%;
   color: white;
 }
-.fa-twitter{
+.fa-twitter {
   font-size: 250%;
   color: white;
 }
-.fa-whatsapp{
+.fa-whatsapp {
   font-size: 250%;
   color: white;
 }
@@ -99,7 +97,7 @@ body {
   color: #6b0036;
   z-index: 2;
 }
-.footer-items{
+.footer-items {
   text-decoration: none;
   color: #ff0080;
   font-size: 95%;
@@ -112,12 +110,12 @@ body {
 }
 
 /* Btn PAGINACION */
-.btn-paginacion{
-  background-color:#ff0080 !important;
-  color: rgb(255, 255, 255) !important; 
+.btn-paginacion {
+  background-color: #ff0080 !important;
+  color: rgb(255, 255, 255) !important;
   border-radius: 90px !important;
 }
-.btn-paginacion:hover{
+.btn-paginacion:hover {
   background-color: white !important;
   color: #ff0080 !important;
   border: 1px solid #ff0080 !important;
@@ -125,7 +123,7 @@ body {
 /* Fin Btn PAGINACION */
 
 /* Admin */
-.fa-user-plus{
+.fa-user-plus {
   color: white;
 }
 .appTabla {
@@ -136,11 +134,11 @@ body {
 /* Admin */
 
 /* Producto id */
-.img-id{
+.img-id {
   height: 30%;
   width: 85%;
   border-radius: 15%;
-} 
+}
 
 .atajos-text {
   text-decoration: none !important;
@@ -148,7 +146,7 @@ body {
 }
 
 .atajos-text:hover {
-  color: #ff0080!important;
+  color: #ff0080 !important;
 }
 
 .btn-volver {
@@ -163,7 +161,7 @@ body {
 }
 
 .btn-compra {
-  border:1px solid #ff0080 !important;
+  border: 1px solid #ff0080 !important;
   color: #ff0080 !important;
   text-decoration: none !important;
 }
@@ -174,26 +172,27 @@ body {
 }
 
 /* BUSCADOR */
-.busquedaL{
+.busquedaL {
   z-index: 1;
-  
+
   position: absolute;
   background-color: #f6f6f6;
   text-decoration: none;
-  list-style:none;
+  list-style: none;
   font-size: 15px;
- 
-  box-shadow: 1px 8px 16px 0px rgba(0,0,0,0.24);
--webkit-box-shadow: 1px 8px 16px 0px rgba(0,0,0,0.24);
--moz-box-shadow: 1px 8px 16px 0px rgba(0,0,0,0.24);
+
+  box-shadow: 1px 8px 16px 0px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 1px 8px 16px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 1px 8px 16px 0px rgba(0, 0, 0, 0.24);
 }
 
-.busqueda-nombre{
+.busqueda-nombre {
   font-size: 100%;
   color: #ff00aa;
+  font-weight: 400 !important;
 }
 
-.btn-search{
+.btn-search {
   background-color: #ff00aa !important;
 }
 /* BUSCADOR */
@@ -204,38 +203,100 @@ body {
   width: 17vw;
 } */
 
-.img-home{
+.img-home {
   height: 300px;
   width: 300px;
   border-radius: 10px;
 }
 
-.nombreP-home{
+.nombreP-home {
   text-decoration: none !important;
   color: #292929;
+  font-weight: 470 !important;
 }
 
 /* Home */
 
 /* Carrito */
-.title-cart{
+.title-cart {
   background-color: #ff0080;
   font-size: 20px;
+  border: 4px solid #ff0080 !important;
+  border-radius: 7px;
 }
 
-.btn-cart-plus{
+.btn-cart-plus {
   background-color: #ff0080 !important;
   color: white;
 }
 
-.btn-cart-pedido{
+.btn-cart-pedido {
   background-color: #ff0080 !important;
   color: white;
 }
 
-.btn-cart-pedido:hover{
- border:1px solid #ff0080 !important;
- color: #ff0080 !important;
+.btn-cart-pedido:hover {
+  border: 1px solid #ff0080 !important;
+  color: #ff0080 !important;
 }
 /* Carrito */
 
+.cargando {
+  color: #d31c77;
+}
+.seguir-comprando {
+  color: #ff0080 !important;
+  font-size: 17px;
+}
+.seguir-comprandoBlock {
+  color: #ff0080 !important;
+  border: 1px solid #ff0080 !important;
+}
+.seguir-comprandoBlock:hover {
+  color: #fdfdfd !important;
+  background-color: #ff0080 !important;
+}
+/* FIN Carrito */
+
+/* Registrar Usuario */
+.tituloModal {
+  background-color: rgb(248, 159, 174) !important;
+}
+.logoRegis {
+  width: 250px;
+}
+.btn-registrar {
+  background-color: #fb3bbb !important;
+  border: 1px solid #ff86d7 !important;
+}
+.btn-registrar-login {
+  background-color: #fdfdfd !important;
+  border: 1px solid #ffffff !important;
+  color: #ff0080 !important;
+}
+
+.form-control {
+  border-radius: 12px !important;
+}
+.form-control:hover {
+  border: 1px solid #ff0080;
+}
+.form-group {
+  color: #ca007d !important;
+}
+/* Registro */
+
+/* Login */
+.bienvenidoLogin {
+  font-size: 33px !important;
+  font-weight: 100;
+  color: #d31c77;
+}
+
+.login-form {
+  border-radius: 12px;
+  box-shadow: -2px -2px 43px -16px rgba(0,0,0,0.46);
+  -webkit-box-shadow: -2px -2px 43px -16px rgba(0,0,0,0.46);
+  -moz-box-shadow: -2px -2px 43px -16px rgba(0,0,0,0.46);
+}
+/*  */

@@ -117,21 +117,22 @@ const Carrito = () => {
   return (
     <>
       {carrito.total === 0 ? (
-        <div className="container mt-5 ">
+        <div className="container mt-5 mb-5">
           <div className="row">
             <div className="col text-center">
               <img
-                src="https://png.pngtree.com/element_our/20190528/ourlarge/pngtree-empty-shopping-cart-icon-image_1144333.jpg"
+                src="https://www.editorialparalelo28.com/images/cartEmpty.png"
                 className="w-25"
                 alt="carrito vacío"
               />
-              <h1>Tu carrito esta vacio</h1>
-              <Link to="/shop">
-                <button className="btn btn-color ">
-                  <h4>Seguir comprando →</h4>
+              <h1 className="mt-3 mb-4">Tu carrito esta vacio</h1>
+              <Link to="/">
+                <button className="btn seguir-comprandoBlock ">
+                  <h4>Seguir comprando <i className="fas fa-arrow-right"></i></h4>
                 </button>
               </Link>
             </div>
+            <div className="row mb-5 pb-5"></div>
           </div>
         </div>
       ) : (
@@ -152,12 +153,12 @@ const Carrito = () => {
                     {carrito.productos.map((producto) => (
                       <tr key={producto.id}>
                         <th scope="row">{producto.nombre}</th>
-                        <td>$ {producto.precio}</td>
+                        <td>{"$"}{producto.precio}</td>
                         <td>
                           <div className="row">
-                            <div className="col text-end pe-0">
+                            <div className="col text-end ">
                               <button
-                                className=" py-0 px-1 btn btn-cart-plus boton-carrito"
+                                className="py-0 px-1 btn btn-cart-plus boton-carrito"
                                 onClick={() => restarProducto(producto)}
                                 disabled={disableButton(producto)}
                               >
@@ -191,9 +192,9 @@ const Carrito = () => {
                   </tbody>
                 </table>
                 <div className="row text-center px-0">
-                  <div className="col-12 col-md-6">
+                  <div className="col-12 col-md-6 mb-2 mt-3">
                     {" "}
-                    <h2>Total: $ {carrito.costo}</h2>
+                    <h2>Total: {"$"}{carrito.costo}</h2>
                   </div>
                   <div className="col-12 col-md-6 mb-3">
                     {" "}
@@ -201,13 +202,16 @@ const Carrito = () => {
                       <h5 className="text-white mt-1">Realizar Pedido</h5>
                     </button>
                     <Link to="/">
-                      <p className=" mt-2 text-black">Seguir comprando →</p>
+                      <button className="btn">
+                      <p className="nav-link mt-2 seguir-comprando">Seguir comprando <i className="fas fa-arrow-right"></i></p></button>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div className="row mb-5 pb-5"></div>
+          
         </div>
       )}
     </>

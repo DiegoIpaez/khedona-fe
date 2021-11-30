@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import CarritoContext from "./CarritoContext";
 
 const Donas = ({ productos }) => {
-
   const { carrito, setCarrito } = useContext(CarritoContext);
 
   localStorage.setItem("cart", JSON.stringify(carrito));
@@ -49,16 +48,18 @@ const Donas = ({ productos }) => {
     }
   };
 
-
   return (
     <>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {productos.map((producto) => (
           <div
-            className="col-12 col-md-3 mt-4  imagen-work text-center"
+            className="col-12 col-xl-3 col-lg-6 col-md-6 mt-4  imagen-work text-center"
             key={producto._id}
           >
-            <Link to={`product/${producto._id}`}>
+            <Link
+              to={`product/${producto._id}`}
+              style={{ textDecoration: "none" }}
+            >
               <img
                 src={
                   producto.img
@@ -68,14 +69,33 @@ const Donas = ({ productos }) => {
                 className="img-home"
                 alt={producto.nombre}
               />
-              <h6 className="nombreP-home pt-2">{producto.nombre}</h6>
+              <h6 className="nombreP-home pt-2 mt-1 pb-1">
+                {producto.nombre}{" "}
+                {producto.disponible ? (
+                  <i
+                    className="fas fa-check-square"
+                    style={{ color: "green" }}
+                  ></i>
+                ) : (
+                  <i
+                    className="fas fa-times-circle"
+                    style={{ color: "red" }}
+                  ></i>
+                )}
+              </h6>
             </Link>
-            <button
-              className="btn btn-compra ps-5 pe-5 mb-5"
-              onClick={() => guardarProducto(producto)}
-            >
-              <i className="fas fa-shopping-cart"></i> AGREGAR
-            </button>
+            {producto.disponible ? (
+              <button
+                className="btn btn-compra ps-5 pe-5"
+                onClick={() => guardarProducto(producto)}
+              >
+                <i className="fas fa-shopping-cart"></i> AGREGAR
+              </button>
+            ) : (
+              <button className="btn ps-5 pe-5" style={{ color: "black", border: "1px solid black" }}>
+                <i className="fas fa-shopping-cart"></i> AGREGAR
+              </button>
+            )}
           </div>
         ))}
       </div>

@@ -14,6 +14,7 @@ import Error404 from "../pages/Error404";
 import CarritoContext from "../components/CarritoContext";
 import TiendaContext from "../components/TiendaContext";
 
+
 function App() {
   const changuito = JSON.parse(localStorage.getItem("cart")) || {
     total: 0,
@@ -35,7 +36,7 @@ function App() {
             <Route exact path="/product/:id" component={ProductosId} />
             <ProtectedRoutes exact path="/admin" component={Admin} />
             <ProtectedRoutes exact path="/user" component={Usuario} />
-            <ProtectedRoutes exact path="/cart" component={Carrito} />
+            <Route exact path="/cart" component={Carrito} />
             <Route component={Error404} />
           </Switch>
           <Footer />

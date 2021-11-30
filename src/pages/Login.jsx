@@ -4,7 +4,6 @@ import { postAuth } from "../helpers/autenticador";
 import { Form, Button } from "react-bootstrap";
 import ModalRegisUser from "../components/modals/ModalRegisUser";
 
-
 export default function Login() {
   const isMounted = useRef(true);
 
@@ -68,7 +67,7 @@ export default function Login() {
   const handleShow = () => setShow(true);
 
   return (
-    <div className="container">
+    <div className="container mt-5 mb-5">
       <div className="row mt-5">
         <div className="col-md-3 col-12"></div>
         <div className="col-md-6 col-12 login-form pt-4 pb-4">
@@ -76,9 +75,9 @@ export default function Login() {
             {/* Cuerpo Login*/}
             <div className="row">
               <Form onSubmit={handleSumbit}>
-                <h3 className="text-center">Bienvenido a KheDona</h3>
-               
-                <hr className="userlogin-hr mb-4" />
+                <h3 className="bienvenidoLogin text-center"> Bienvenido a KheDona</h3>
+
+                <hr className="userlogin-hr mb-4" style={{ color: '#d31c77' }} />
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>
                     Email:<span className="text-required">*</span>
@@ -91,7 +90,7 @@ export default function Login() {
                     placeholder="user@gmail.com"
                     className="inputLoginUser"
                     maxLength={30}
-										minLength={8}
+                    minLength={8}
                   />
                   <Form.Text className="text-muted ps-1">
                     (* We'll never share your email with anyone else.)
@@ -110,15 +109,14 @@ export default function Login() {
                     placeholder="Password"
                     className="inputLoginUser"
                     maxLength={20}
-										minLength={6}
+                    minLength={6}
                   />
                 </Form.Group>
-                
 
                 <hr />
                 <div className="d-grid gap-2">
                   <Button
-                    className="btn-loginUser"
+                    className="btn-registrar"
                     disabled={btnDisable}
                     type="submit"
                   >
@@ -126,7 +124,7 @@ export default function Login() {
                   </Button>
                 </div>
                 <div className="text-center">
-                  <button className="btn mt-2" onClick={handleShow}>
+                  <button className="btn btn-registrar-login mt-2" onClick={handleShow}>
                     ¿No tienes una cuenta? Haz clic aquí
                   </button>
                 </div>
@@ -136,15 +134,15 @@ export default function Login() {
                     {login.msg}
                   </div>
                 )}
-
-                <ModalRegisUser show={show} handleClose={handleClose} />
               </Form>
             </div>
             {/* Fin de Cuerpo login */}
           </div>
         </div>
         <div className="col-md-3 col-12"></div>
-      </div>
+      </div>{" "}
+      <div className="row mb-5 pb-3"></div>
+      <ModalRegisUser show={show} handleClose={handleClose} />
     </div>
   );
 }
