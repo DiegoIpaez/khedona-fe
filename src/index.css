@@ -25,9 +25,9 @@ body {
   width: 220px;
 }
 
-.activado {
-  border-bottom: 2px solid #ff00aa;
-  font-weight: bold;
+.droopdown-nav{
+  font-weight: 450 !important;
+  font-size: 115% !important;
 }
 
 /* Carousel */
@@ -207,6 +207,7 @@ body {
   height: 300px;
   width: 300px;
   border-radius: 10px;
+  
 }
 
 .nombreP-home {

@@ -4,7 +4,6 @@ import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import logoHome from "../assets/logo-home.png";
 
 const Navbarjsx = () => {
-  // Login
   const history = useHistory();
 
   const logout = () => {
@@ -30,7 +29,7 @@ const Navbarjsx = () => {
               </Nav.Link>
             </Nav>
             <Nav> 
-              <Nav.Link eventKey={2} as={Link} to="/cart" className="pt-3" >
+              <Nav.Link eventKey={2} as={Link} to="/cart" className="pt-3 ps-1" >
               <i className="fas fa-shopping-cart"></i>
               </Nav.Link>
               {/* Boton desplegable */}
@@ -39,15 +38,15 @@ const Navbarjsx = () => {
                 id="collasible-nav-dropdown"
                 className="nav-link"
               >
-                <NavDropdown.Item as={Link} to="/user" className="nav-link">
-                <i className="far fa-user me-1"></i>Yo
+                <NavDropdown.Item as={Link} to="/user" className="nav-link droopdown-nav ps-2">
+                <i className="far fa-user me-1"></i> MiCuenta
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} className="nav-link" to="/admin">
-                  Admin
+                <NavDropdown.Item as={Link} className="nav-link droopdown-nav ps-2" to="/admin">
+                <i className="fas fa-cogs"></i> Admin
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item onClick={logout}>
-                  <span className="nav-link">
+                  <span className="nav-link droopdown-nav">
                     <i className="fas fa-sign-out-alt"></i> Salir
                   </span>
                 </NavDropdown.Item>

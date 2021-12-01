@@ -1,34 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { getPedido, postPedido, putPedido } from "../../helpers/pedidos";
+import { getPedido, putPedido } from "../../helpers/pedidos";
 import { Modal, Button } from "react-bootstrap";
 
 const ModalPedidos = ({ show, handleClose, actualizar }) => {
   const [loading, setLoading] = useState(false);
 
   const [formValue, setFormValue] = useState({
-    productos: [{}],
-    total: "",
     nota: "",
     realizado: false,
-    fecha: "",
   });
 
   useEffect(() => {
     setFormValue({
-      productos: [{}],
-      total: "",
       nota: "",
       realizado: false,
-      fecha: "",
     });
     if (actualizar) {
       getPedido(actualizar).then((respuesta) => {
         setFormValue({
-          productos: respuesta.pedido.productos,
-          total: respuesta.pedido.total,
           nota: respuesta.pedido.nota,
           realizado: respuesta.pedido.realizado,
-          fecha: respuesta.pedido.fecha,
         });
       });
     }
@@ -57,28 +48,8 @@ const ModalPedidos = ({ show, handleClose, actualizar }) => {
         }
         setLoading(false);
         setFormValue({
-          productos: [{}],
-          total: "",
           nota: "",
           realizado: false,
-          fecha: "",
-        });
-        handleClose();
-      });
-    } else {
-      postPedido(formValue).then((respuesta) => {
-        if (respuesta.errors) {
-          setLoading(false);
-          return window.alert(respuesta.errors[0].msg);
-        }
-        setLoading(false);
-
-        setFormValue({
-          productos: [{}],
-          total: "",
-          nota: "",
-          realizado: false,
-          fecha: "",
         });
         handleClose();
       });
@@ -90,48 +61,12 @@ const ModalPedidos = ({ show, handleClose, actualizar }) => {
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header className="tituloModal" closeButton>
           <Modal.Title>
-            {actualizar ? "Modificar estado del producto" : "Nuevo Pedido"}
+            {actualizar ? "Modificar estado del producto" : ""}
           </Modal.Title>
         </Modal.Header>
         <form onSubmit={handleSubmit}>
           <Modal.Body>
-            <div className="form-group">
-              <label>Productos</label>
-              <input
-                type="text"
-                name="productos"
-                className="form-control"
-                placeholder=""
-                required
-                value={formValue.productos}
-                onChange={handleChange}
-                maxLength={20}
-                minLength={3}
-              />
-            </div>
-            <div className="form-group">
-              <label>Total</label>
-              <input
-                type="number"
-                name="total"
-                className="form-control"
-                value={formValue.total}
-                onChange={handleChange}
-                maxLength={20}
-                minLength={1}
-              />
-            </div>
-            <div className="form-group">
-              <label>fecha</label>
-              <input
-                type="text"
-                name="fecha"
-                className="form-control"
-                value={formValue.fecha}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group">
+            <div className="form-group mb-2">
               <label>Descripción/Nota</label>
               <textarea
                 type="text"

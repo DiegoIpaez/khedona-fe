@@ -14,8 +14,12 @@ const Admin = () => {
 
   if (state.rol !== "ADMIN_ROLE") {
     return (
-      <div className="alert alert-danger text-center" role="alert">
-        Usuario no autorizado...
+      <div className="container-fluid mt-5 mb-5 pb-5 pt-5">
+        <div className="container-fluid mt-5 mb-5 pb-5 "></div>
+        <div className="alert alert-danger text-center mt-5  mb-5" role="alert">
+          Usuario no autorizado...
+        </div>
+        <div className="container-fluid mt-5 mb-5 pb-5 pt-5"></div>
       </div>
     );
   }
