@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import CarritoContext from "../components/CarritoContext"
 import logoHome from "../assets/logo-home.png";
 
 const Navbarjsx = () => {
+  const { carrito } = useContext(CarritoContext)
   const history = useHistory();
 
   const logout = () => {
@@ -30,7 +32,15 @@ const Navbarjsx = () => {
             </Nav>
             <Nav> 
               <Nav.Link eventKey={2} as={Link} to="/cart" className="pt-3 ps-1" >
-              <i className="fas fa-shopping-cart"></i>
+              <i className="fas fa-shopping-cart"></i>{carrito?.total !== 0 && (
+											<b>
+												<span style={{ fontWeight:"400", fontSize:"20px" }}>
+													{" "}{carrito.total} <span> | </span>
+													<span>$</span>
+													{carrito.costo}
+												</span>
+											</b>
+										)}
               </Nav.Link>
               {/* Boton desplegable */}
               <NavDropdown

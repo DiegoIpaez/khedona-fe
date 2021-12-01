@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,18 +13,26 @@ const Footer = () => {
             </div>
 
             <div className="col-3 col-md-2 text-center redes-items">
-            <i className="fab fa-twitter"></i>
+              <Link to="/error">
+                <i className="fab fa-twitter"></i>
+              </Link>
             </div>
 
             <div className="col-3 col-md-2 text-center redes-items">
-            <i className="fab fa-facebook-f"></i>
+              <Link to="/error">
+                <i className="fab fa-facebook-f"></i>
+              </Link>
             </div>
 
             <div className="col-3 col-md-2 text-center redes-items">
-            <i className="fab fa-instagram"></i>
+              <Link to="/error">
+                <i className="fab fa-instagram"></i>
+              </Link>
             </div>
             <div className="col-3 col-md-2 text-center redes-items">
-            <i className="fab fa-whatsapp"></i>
+              <Link to="/error">
+                <i className="fab fa-whatsapp"></i>
+              </Link>
             </div>
           </div>
         </div>
@@ -34,18 +43,21 @@ const Footer = () => {
           <div className="row text-center">
             <div className="col-12 col-md-1 mb-2 footer-items"></div>
             <div className="col-12 col-md-3 mb-2 footer-items">
-              <b>
+            <Link to="/error" className="nav-link" style={{ color: "#ff00aa" }} >
+              <span>
                 Desarrollado por el grupo "FIVECODES", visitanos en nuestra web
                 www.Fivecodes.com.ar
-              </b>
+              </span></Link>
             </div>
 
             <div className="col-12 col-md-4 mb-2 footer-items">
-              <span>NOSOTROS</span>
+            <Link to="/error" className="nav-link" style={{ color: "#ff00aa" }} >
+              <span>NOSOTROS</span></Link>
             </div>
 
             <div className="col-12 col-md-3 mb-2 footer-items">
-              <span>KHEDONA © 2019-2021</span>
+            <Link to="/error" className="nav-link" style={{ color: "#ff00aa" }} >
+              <span>KHEDONA © 2019-2021</span></Link>
             </div>
             <div className="col-12 col-md-1 mb-2 footer-items"></div>
           </div>

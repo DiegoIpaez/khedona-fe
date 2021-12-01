@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const Carrito = () => {
   const history = useHistory();
-  const {carrito, setCarrito} = useContext(CarritoContext);
+  const { carrito, setCarrito } = useContext(CarritoContext);
 
   localStorage.setItem("cart", JSON.stringify(carrito));
 
@@ -98,7 +98,7 @@ const Carrito = () => {
           }, 1000);
 
           setCarrito({
-            ...carrito
+            ...carrito,
           });
         });
       }
@@ -128,7 +128,9 @@ const Carrito = () => {
               <h1 className="mt-3 mb-4">Tu carrito esta vacio</h1>
               <Link to="/">
                 <button className="btn seguir-comprandoBlock ">
-                  <h4>Seguir comprando <i className="fas fa-arrow-right"></i></h4>
+                  <h4>
+                    Seguir comprando <i className="fas fa-arrow-right"></i>
+                  </h4>
                 </button>
               </Link>
             </div>
@@ -136,82 +138,72 @@ const Carrito = () => {
           </div>
         </div>
       ) : (
-        <div className="container mb-5 pb-5">
-          <div className="row">
-            <div className="col">
-              <div className="card table-responsive mt-5 ">
-                <table className="table">
-                  <thead>
-                    <tr className="text-center title-cart text-white">
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Precio</th>
-                      <th scope="col">Cantidad</th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-center">
-                    {carrito.productos.map((producto) => (
-                      <tr key={producto.id}>
-                        <th scope="row">{producto.nombre}</th>
-                        <td>{"$"}{producto.precio}</td>
-                        <td>
-                          <div className="row">
-                            <div className="col text-end ">
-                              <button
-                                className="py-0 px-1 btn btn-cart-plus boton-carrito"
-                                onClick={() => restarProducto(producto)}
-                                disabled={disableButton(producto)}
-                              >
-                                -
-                              </button>
-                            </div>
-                            <div className="col p-0 m-auto">
-                              <span>{producto.cantidad}</span>
-                            </div>
-
-                            <div className="col text-start ps-0">
-                              <button
-                                className="btn btn-cart-plus py-0 px-1 boton-carrito "
-                                onClick={() => sumarProducto(producto)}
-                              >
-                                +
-                              </button>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <button
+        <div className="container mb-5 pb-5 mt-5">
+          <div className="row title-cart pt-2 pb-2 text-center text-white">
+            <div className="col-3">Nombre</div>
+            <div className="col-3">Precio</div>
+            <div className="col-3">Cantidad</div>
+            <div className="col-3"></div>
+          </div>
+          {carrito.productos.map((producto) => (
+            <div className="row text-center pt-3" key={producto.id}>
+              <div className="col-3">{producto.nombre}</div>
+              <div className="col-3">
+                {"$"}
+                {producto.precio}
+              </div>
+              <div className="col-1">
+                <button
+                  className="py-0 px-1 btn btn-cart-plus boton-carrito"
+                  onClick={() => restarProducto(producto)}
+                  disabled={disableButton(producto)}
+                >
+                  -
+                </button>
+              </div>
+              <div className="col-1">{producto.cantidad}</div>
+              <div className="col-1">
+                <button
+                  className="btn btn-cart-plus py-0 px-1 boton-carrito "
+                  onClick={() => sumarProducto(producto)}
+                >
+                  +
+                </button>
+              </div>
+              <div className="col-3"><button
                             className="btn btn-danger ms-2 "
                             onClick={() => borrarProducto(producto)}
                           >
                             <i className="fas fa-trash-alt"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <div className="row text-center px-0">
-                  <div className="col-12 col-md-6 mb-2 mt-3">
-                    {" "}
-                    <h2>Total: {"$"}{carrito.costo}</h2>
-                  </div>
-                  <div className="col-12 col-md-6 mb-3">
-                    {" "}
-                    <button className="btn btn-cart-pedido" onClick={crearPedido}>
-                      <h5 className="text-white mt-1">Realizar Pedido</h5>
-                    </button>
-                    <Link to="/">
-                      <button className="btn">
-                      <p className="nav-link mt-2 seguir-comprando">Seguir comprando <i className="fas fa-arrow-right"></i></p></button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+                          </button></div>
+              <hr className="mt-3" />
             </div>
+          ))}
+          <div className="row text-center px-0">
+            <div className="col-12 col-md-6 mb-2 mt-3">
+              {" "}
+              <h2>
+                Total: {"$"}
+                {carrito.costo}
+              </h2>
+            </div>
+            <div className="col-12 col-md-6 mb-3">
+              {" "}
+              <button className="btn btn-cart-pedido" onClick={crearPedido}>
+                <h5 className="text-white mt-1">Realizar Pedido</h5>
+              </button>
+              <Link to="/">
+                <button className="btn">
+                  <p className="nav-link mt-2 seguir-comprando">
+                    Seguir comprando <i className="fas fa-arrow-right"></i>
+                  </p>
+                </button>
+              </Link>
+            </div>
+            <hr />
           </div>
+
           <div className="row mb-5 pb-5"></div>
-          
         </div>
       )}
     </>
