@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { postUsuario } from "../../helpers/usuarios";
 import { Modal, Button } from "react-bootstrap";
-import Swal from "sweetalert2"
-import logoRegis from "../../assets/logo-home.png"
+import Swal from "sweetalert2";
+import logoRegis from "../../assets/logo-home.png";
 
 const ModalRegisUser = ({ show, handleClose }) => {
   const [loading, setLoading] = useState(false);
@@ -56,7 +56,9 @@ const ModalRegisUser = ({ show, handleClose }) => {
       <Modal show={show} onHide={handleClose} centered>
         <div className="cuerpoModal">
           <Modal.Header className="tituloModal">
-            <Modal.Title className="text-white"><img src={logoRegis} className="logoRegis" alt="" /></Modal.Title>
+            <Modal.Title className="text-white">
+              <img src={logoRegis} className="logoRegis" alt="" />
+            </Modal.Title>
           </Modal.Header>
           <form onSubmit={handleSubmit}>
             <Modal.Body>
@@ -70,6 +72,8 @@ const ModalRegisUser = ({ show, handleClose }) => {
                   required
                   value={formValue.nombre}
                   onChange={handleChange}
+                  maxLength={20}
+                  minLength={1}
                 />
               </div>
               <div className="form-group mb-3">
@@ -82,6 +86,8 @@ const ModalRegisUser = ({ show, handleClose }) => {
                   required
                   value={formValue.apellido}
                   onChange={handleChange}
+                  maxLength={20}
+                  minLength={1}
                 />
               </div>
               <div className="form-group mb-3">
@@ -94,6 +100,8 @@ const ModalRegisUser = ({ show, handleClose }) => {
                   required
                   value={formValue.direccion}
                   onChange={handleChange}
+                  maxLength={100}
+                  minLength={5}
                 />
               </div>
               <div className="form-group mb-3">
@@ -106,6 +114,8 @@ const ModalRegisUser = ({ show, handleClose }) => {
                   required
                   value={formValue.email}
                   onChange={handleChange}
+                  maxLength={40}
+                  minLength={6}
                 />
               </div>
               <div className="form-group mb-3">
@@ -118,6 +128,8 @@ const ModalRegisUser = ({ show, handleClose }) => {
                   required
                   value={formValue.password}
                   onChange={handleChange}
+                  maxLength={20}
+                  minLength={6}
                 />
               </div>
               {/*  */}
@@ -125,7 +137,11 @@ const ModalRegisUser = ({ show, handleClose }) => {
             <Modal.Footer>
               <div className="container">
                 <div className="row mb-2">
-                  <Button className="btn-registrar" type="submit" disabled={loading}>
+                  <Button
+                    className="btn-registrar"
+                    type="submit"
+                    disabled={loading}
+                  >
                     Registrarse
                   </Button>
                 </div>

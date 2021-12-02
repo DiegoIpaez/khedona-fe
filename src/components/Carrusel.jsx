@@ -19,7 +19,10 @@ const Carrusel = () => {
           src={img1}
           alt="First slide"
         />
-        
+        <Carousel.Caption>
+          <h3>Mmm....Rosquillas</h3>
+          <p>- Homero Simpson.</p>
+        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -28,7 +31,11 @@ const Carrusel = () => {
           alt="Second slide"
         />
 
-       
+        <Carousel.Caption>
+          <h3>Un negocio... </h3>
+          <h3>redondo no? jajaj</h3>
+         
+        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -37,7 +44,10 @@ const Carrusel = () => {
           alt="Third slide"
         />
 
-       
+        <Carousel.Caption>
+          <h5>La vida es corta...</h5>
+          <h3>Come mas donas!</h3>
+        </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );
