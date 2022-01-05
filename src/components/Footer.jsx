@@ -43,21 +43,36 @@ const Footer = () => {
           <div className="row text-center">
             <div className="col-12 col-md-1 mb-2 footer-items"></div>
             <div className="col-12 col-md-3 mb-2 footer-items">
-            <Link to="/error" className="nav-link" style={{ color: "#ff00aa" }} >
-              <span>
-                Desarrollado por el grupo "FIVECODES", visitanos en nuestra web
-                www.Fivecodes.com.ar
-              </span></Link>
+              <Link
+                to="/error"
+                className="nav-link"
+                style={{ color: "#ff00aa" }}
+              >
+                <span>
+                  Desarrollado por DiegoIpaez , para conocer mas trabajos como este
+                  https://github.com/DiegoIpaez?tab=repositories
+                </span>
+              </Link>
             </div>
 
             <div className="col-12 col-md-4 mb-2 footer-items">
-            <Link to="/error" className="nav-link" style={{ color: "#ff00aa" }} >
-              <span>NOSOTROS</span></Link>
+              <Link
+                to="/error"
+                className="nav-link"
+                style={{ color: "#ff00aa" }}
+              >
+                <span>NOSOTROS</span>
+              </Link>
             </div>
 
             <div className="col-12 col-md-3 mb-2 footer-items">
-            <Link to="/error" className="nav-link" style={{ color: "#ff00aa" }} >
-              <span>KHEDONA © 2019-2021</span></Link>
+              <Link
+                to="/error"
+                className="nav-link"
+                style={{ color: "#ff00aa" }}
+              >
+                <span>KHEDONA © 2019-2021</span>
+              </Link>
             </div>
             <div className="col-12 col-md-1 mb-2 footer-items"></div>
           </div>

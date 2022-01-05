@@ -50,10 +50,10 @@ const Donas = ({ productos }) => {
 
   return (
     <>
-      <div className="row row-cols-1 row-cols-md-3 g-4">
+      <div className="row row-cols-1 row-cols-md-3">
         {productos.map((producto) => (
           <div
-            className="col-12 col-xl-3 col-lg-6 col-md-6 mt-4  imagen-work text-center"
+            className="col-12 col-xl-3 col-lg-6 col-md-6 mb-3  imagen-work text-center"
             key={producto._id}
           >
             <Link

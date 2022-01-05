@@ -28,6 +28,19 @@ export const getProducto = async (id) => {
   return datos;
 };
 
+export const getProductoCateg = async (id) => {
+  const resp = await fetch(`${url}/categ/${id}`, {
+    method: "GET",
+
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  });
+  const datos = await resp.json();
+
+  return datos;
+};
+
 //Agregar producto
 export const postProducto = async (data) => {
   const resp = await fetch(`${url}`, {
