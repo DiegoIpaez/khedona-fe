@@ -13,6 +13,7 @@ import ProtectedRoutes from "../helpers/ProtectedRoutes";
 import Error404 from "../pages/Error404";
 import CarritoContext from "../components/CarritoContext";
 import CategoriasId from "../pages/CategoriasId";
+import ProdIdCateg from "../pages/ProdIdCateg";
 
 function App() {
   const changuito = JSON.parse(localStorage.getItem("cart")) || {
@@ -32,6 +33,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/product/:id" component={ProductosId} />
           <Route exact path="/categ/:id" component={CategoriasId} />
+          <Route exact path="/categ/product/:id" component={ProdIdCateg} />
           <ProtectedRoutes exact path="/admin" component={Admin} />
           <ProtectedRoutes exact path="/user" component={Usuario} />
           <Route exact path="/cart" component={Carrito} />

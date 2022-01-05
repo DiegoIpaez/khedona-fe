@@ -100,8 +100,13 @@ const ProductosId = () => {
                 </Link>
               </span>
               <span>|</span>
-              <span className="ps-4 pe-4 atajos-text">
-                {productoX.datos.nombre}
+              <span>
+                <Link
+                  to={`/categ/${productoX.datos._id}`}
+                  className="ps-4 pe-4 atajos-text"
+                >
+                  {productoX.datos.nombre}
+                </Link>
               </span>
               <span>|</span>
               <span className="ps-4 pe-4 atajos-text">

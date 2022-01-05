@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getProductoCateg } from "../helpers/productos";
 import { getCategoriaId } from "../helpers/categorias";
 import Donas from "../components/Donas";
@@ -32,8 +32,19 @@ const CategoriasId = () => {
 
   return (
     <div className="container">
-      <h3 className="mt-4" style={{ color: "rgb(230, 4, 181)" }}>CATEGORIAS | {categoriaId.datos.nombre}</h3>
-      <hr />
+      <div className="row mb-4">
+        <div className="col mt-2 atajos-id">
+          <span className="pe-4">
+            <Link to="/" className="atajos-text">
+              INICIO
+            </Link>
+          </span>
+          <span>|</span>
+          <span className="ps-4 pe-4 atajos-text">
+            {categoriaId.datos.nombre}
+          </span>
+        </div>
+      </div>
 
       <div className="row">
         <Donas productos={productos} />
